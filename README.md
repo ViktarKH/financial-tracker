@@ -42,7 +42,7 @@ ATTENTION: Remember to replace YOUR_MONGO_DB_URI with the actual connection stri
 ```
 # MongoDB Atlas Connection String
 MONGO_URI="YOUR_MONGO_DB_URI"
-# Example: MONGO_URI="mongodb+srv://user:password@cluster0.abcde.mongodb.net/MyFinancesDB?retryWrites=true&w=majority"
+# Example: MONGO_URI="mongodb+srv://your_user:your_password@cluster0.abcde.mongodb.net/MyFinancesDB?retryWrites=true&w=majority"
 ```
 ### 4. Starting the Server
 Start the Node.js server (server.js file):
