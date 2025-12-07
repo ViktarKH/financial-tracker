@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>MyFinances</h1>
+        </header>
+        <div class="main-layout">
+            <div class="sidebar">
+                <div class="balance-info">
+                    <h2>Balance:</h2>
+                    <span id="balance">0.00</span>
+                    <div class="subscriptions-total-info">
+                        Subscriptions: <span id="subscriptions-total">(-0.00)</span>
+                    </div>
+                </div>
+                <div class="function-list">
+                    <button class="function-btn active" data-target="add-income">Income</button>
+                    <button class="function-btn" data-target="add-expense">Expense</button>
+                    <button class="function-btn" data-target="add-subscription">Subscriptions</button>
+                    <button class="function-btn" data-target="add-savings">Savings</button>
+                    <button class="function-btn" data-target="add-loan">Loans</button>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="form-container">
+                </div>
+                <div class="analytics-block">
+                    <div class="chart-column">
+                        <div id="expenses-chart-container" class="chart-container">
+                            <h4 id="chart-title">Expense Distribution</h4>
+                            <canvas id="expenses-chart"></canvas>
+                        </div>
+                        <div id="dynamic-chart-container" class="chart-container" style="display: none;">
+                            <h4 id="dynamic-chart-title"></h4>
+                            <canvas id="dynamic-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="history-column">
+                        <h4 id="list-title">Transaction History</h4>
+                        <div id="transaction-list-container">
+                            <ul id="transaction-list"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

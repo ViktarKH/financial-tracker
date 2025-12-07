@@ -1,0 +1,238 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #ecf0f1;
+    --income-color: #2ecc71;
+    --expense-color: #e74c3c;
+    --loan-color: #e74c3c;
+    --savings-color: #9b59b6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    width: 95vw;
+    height: 95vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    height: 100%;
+}
+
+.sidebar {
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.balance-info {
+    text-align: center;
+}
+
+.subscriptions-total-info {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#subscriptions-total {
+    color: var(--expense-color);
+}
+
+.balance-info #balance {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--income-color);
+}
+
+.function-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.function-btn {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+}
+
+.function-btn.active,
+.function-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.main-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+}
+
+#form-container {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+    height: 200px;
+    overflow-y: auto;
+}
+
+#form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select,
+button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.analytics-block {
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.chart-column {
+    flex-shrink: 0;
+    width: 300px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    height: 330px;
+}
+
+.chart-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-column {
+    flex-grow: 1;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+    height: 330px;
+    overflow-y: auto;
+}
+
+.sum {
+    position: sticky;
+}
+
+#transaction-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#transaction-list li {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #2980b9;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
